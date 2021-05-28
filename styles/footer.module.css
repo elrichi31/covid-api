@@ -1,0 +1,31 @@
+.up{
+    background-color: #111;
+    color: white;
+    /* border-top: 1px solid white; */
+}
+.button{
+    font-size: 30px;
+    color: white;
+}
+.icons{
+    color: white;
+    margin: 1px 20px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #111;
+    text-decoration: none;
+}
+.down{
+    background-color: #111;
+    color: white;
+}
+.icons:hover{
+    border-bottom: 1px solid white;
+    color: white !important;
+    transition: 0.5s linear 0.1s;
+    background-color: transparent;
+    text-decoration: none;
+}
+.all{
+    padding-top: 4vh;
+    background-color: #111;
+}

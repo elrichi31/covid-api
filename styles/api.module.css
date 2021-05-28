@@ -1,0 +1,17 @@
+.all{
+    padding-top: 60px;
+    background-color: #111;
+    color: white;
+    margin-bottom: 0px;
+    padding: 10vh 9vh;
+}
+.text{
+    margin-bottom: 0rem;
+}
+.code{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 20px;
+}

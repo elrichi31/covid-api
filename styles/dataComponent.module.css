@@ -1,0 +1,19 @@
+.titles {
+    color: white;
+}
+
+.data{
+    background-color: #111;
+}
+.chart{
+    height: 90%;
+    width: 70%;
+    margin: auto;
+}
+
+.title{
+    padding-top: 70px;
+    color: white;
+    text-align: center;
+    margin-bottom: 9vh;
+}

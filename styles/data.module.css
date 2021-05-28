@@ -1,0 +1,21 @@
+.flag{
+    border-radius: 150px;
+    height: 50px;
+    width: 50px;
+}
+.country{
+    display: grid;
+    margin-left: 9vh;
+    margin-right: 9vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+}
+.dataCo{
+    background-color: #111;
+    padding-top: 65px;
+}
+.title{
+    margin: 2vh 9vh;
+    color: white;
+    font-size: 5vh;
+}

@@ -1,0 +1,44 @@
+h1.card{
+
+    color: white;
+    display: block;
+    font-size: 3vh;
+}
+p.card{
+
+    color: white;
+    display: block;
+    font-size: 2vh;
+}
+.card_div{
+    background: #232320;
+    display: flex;
+    width: 45vh;
+    border-radius:1.5vh;
+    margin: 1vh;
+    align-self: center;
+    justify-self: center;
+}
+.card_div:hover{
+    background-color: #112240;
+}
+
+.img_card{
+    border-radius: 10vh;
+    height: 8vh;
+    width: 12vh;
+    
+}
+.img_div{
+    margin: auto;
+}
+.img_div:hover{
+    background-color: #112240;
+}
+.text_div{
+    margin: auto;
+    margin-top: 1vh;
+}
+.text_div:hover{
+    background-color: #112240;
+}

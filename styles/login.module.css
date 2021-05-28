@@ -1,0 +1,87 @@
+.home_page{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #111111;
+}
+.text_title{
+    color: white;
+    font-size: 100px;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.forms{
+    background: white;
+    margin: 5px;
+}
+.forms_register{
+    background: white;
+    text-align: center;
+    margin: 20px;
+}
+.forms_title {
+    background: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.login_form{
+    background: white;
+    width: 450px;
+    height: 100vh;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 23vh;
+    
+}
+.info{
+    background: #E9303D;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.img{
+    background-color: #E9303D;
+    
+}
+.text_info{
+    background-color: #E9303D;
+    color: white;
+    margin: auto;
+    
+}
+.text-register{
+    align-items: center;
+}
+#button_form{
+    margin-top: 3%;
+    border-radius: 50px;
+}
+@media (max-width: 1068px) {
+    .text_title{
+        align-items: center;
+        font-size: 90px;
+        margin-left: 75px;
+    }
+    .login_form{
+        width: 350px;
+    }
+}
+
+@media (max-width: 881px){
+    .text_title{
+        font-size: 70px;
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 781px){
+    .text_title{
+        font-size: 60px;
+        margin-left: 50px;
+    }
+    
+}

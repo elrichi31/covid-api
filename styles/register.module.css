@@ -1,0 +1,55 @@
+.register_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+}
+
+.forms{
+    background: white;
+    margin: 5px;
+}
+.forms_register{
+    background: white;
+    text-align: center;
+    margin: 20px;
+}
+.forms_title {
+    background: white;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.info{
+    background: #E9303D;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.img{
+    background-color: #E9303D;
+}
+.text_info{
+    background-color: #E9303D;
+    color: white;
+    margin: auto; 
+}
+.login_form{
+    background: white;
+    width: 450px;
+    height: 100vh;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15vh;
+    align-items: center;
+    
+}
+.text-register{
+    align-items: center;
+}
+#button_form{
+    margin-top: 3%;
+    border-radius: 50px;
+}
