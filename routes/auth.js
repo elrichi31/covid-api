@@ -6,6 +6,10 @@ const session = require("express-session")
 const {BasicStrategy} = require("passport-http")
 const UsersService = require("../services/users")
 const bcrypt = require("bcryptjs")
+const jwt = require('jsonwebtoken')
+
+
+require('../utils/auth/strategies/basic')
 
 const app = express()
 app.use(cookieParser("secretCode"))
@@ -35,6 +39,7 @@ passport.use(new BasicStrategy(async function(email, password, cb){
     catch(err){
         return cb(err)
     }
+    
 }))
 
 authRoute.get("/sign-in", (req, res) => {
@@ -43,6 +48,7 @@ authRoute.get("/sign-in", (req, res) => {
 
 authRoute.get("/pro", async function(req, res, next){
     passport.authenticate('basic', function(error, user){
+        console.log(user)
         try{
             if(error || !user){
                 return res.send("unauthorized")
@@ -56,6 +62,7 @@ authRoute.get("/pro", async function(req, res, next){
 
 authRoute.post("/sign-in", async function(req, res, next){
     passport.authenticate('basic', function(error, user){
+        console.log(user)
         try{
             if(error || !user){
                 return res.send("unauthorized")
@@ -64,8 +71,18 @@ authRoute.post("/sign-in", async function(req, res, next){
                 if(error){
                     next(error)
                 }
-                return res.status(200).json({user})
+                const {_id: id, name, email} = user
+                const payload = {
+                    sub: id,
+                    name,
+                    email, 
+                }
+                const token = jwt.sign(payload, "SecretToken",{
+                    expiresIn: '180m'
+                })
+                return res.status(200).json({token, user: user})
             })
+
         } catch(error){
             next(error)
         }
@@ -81,11 +98,18 @@ authRoute.post("/sign-up", async function(req, res, next){
     const {body: user} = req
     const userService = new UsersService()
     try{
-        const createUserId = await userService.createUser({user})
-        res.send({
-            data: createUserId,
-            msg:"user created"
-        })
+        const validate = await userService.validateUser({user})
+        if(validate){
+            const createUserId = await userService.createUser({user})
+            res.status(201)
+            res.send({
+                data: createUserId,
+                msg:"user created"
+            })
+        }
+        else{
+            res.send({msg: "The email is in use"})
+        }
     } catch (err){
         next(err)
     }

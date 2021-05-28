@@ -20,6 +20,14 @@ class UsersService {
         })
         return createUserId
     }
+    async validateUser({user}){
+        const queryUser = await this.getUser({email: user.email})
+        if(queryUser){
+            return false
+        }else{
+            return true
+        }
+    }
 }
 
 module.exports = UsersService
